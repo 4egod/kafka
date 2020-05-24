@@ -16,6 +16,8 @@ RUN apk add --no-cache bash mc
 RUN sed -i 's/log.dirs=.*/log.dirs=\/logs/' /root/kafka/config/server.properties
 RUN sed -i 's/log.retention.hours=.*/log.retention.hours=2160/' /root/kafka/config/server.properties
 #RUN sed -i 's/log.segment.bytes=.*/log.segment.bytes=10000/' /root/kafka/config/server.properties
+RUN echo 'auto.create.topics.enable=true' >> /root/kafka/config/server.properties
+RUN echo 'delete.topic.enable=true' >> /root/kafka/config/server.properties
 
 VOLUME ["/logs"]
 
