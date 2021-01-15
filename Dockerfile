@@ -1,7 +1,7 @@
 FROM openjdk:8u212-jre-alpine
 
-ENV KAFKA_VERSION 2.5.0
-ENV SCALA_VERSION 2.12
+ENV KAFKA_VERSION 2.7.0
+ENV SCALA_VERSION 2.13
 
 RUN wget https://downloads.apache.org/kafka/${KAFKA_VERSION}/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz -P /root
 #COPY ./copy/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz /root
